@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this to your CSS file */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  html {
+    padding: 0px;
+    margin: 0px;
+    background-color:  #f0f8f2
+
+    ; /* Set the background color to Tailwind CSS white */
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  scrollbar-width: none; /* Firefox 64 */
+  -ms-overflow-style: none;
+}
+
+
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: -250px; 
+  width: 250px;
+  height: 100vh; 
+  background-color:  #d1fae5;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+  transition: left 0.3s ease;
+  z-index: 999; 
+} 
+
+.sidebar-container.open {
+  left: 0; 
+}
+
+.toggle-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+}
